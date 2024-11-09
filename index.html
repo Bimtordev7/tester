@@ -1,0 +1,294 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .color-option {
+    cursor: pointer;
+   }
+   .modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+   }
+   .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <header class="bg-green-800 text-white p-2 flex justify-between items-center">
+   <div class="flex items-center">
+    <span class="ml-4 text-sm">
+     Dapatkan Diskon 50% untuk Item Terpilih | Belanja Sekarang
+    </span>
+   </div>
+   <div class="flex items-center space-x-4 mr-8">
+    <span>
+     Lokasi
+    </span>
+   </div>
+  </header>
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+   <div class="flex items-center">
+    
+    <span class="text-2xl font-bold ml-2">
+     Shopcart
+    </span>
+   </div>
+   <div class="relative">
+    <button class="flex items-center text-gray-700" id="category-button">
+     Kategori
+     <i class="fas fa-chevron-down ml-1">
+     </i>
+    </button>
+    <div class="absolute bg-white shadow-lg rounded mt-2 w-48 hidden" id="category-dropdown">
+     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+      Elektronik
+     </a>
+     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+      Pakaian
+     </a>
+     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+      Rumah Tangga
+     </a>
+     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+      Kesehatan
+     </a>
+     <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">
+      Mainan
+     </a>
+    </div>
+   </div>
+   <div class="hidden md:flex items-center space-x-6">
+    <a class="text-gray-700" href="#">
+     Penawaran
+    </a>
+    <a class="text-gray-700" href="#">
+     Apa yang Baru
+    </a>
+    <a class="text-gray-700" href="#">
+     Pengiriman
+    </a>
+   </div>
+   <div class="flex items-center space-x-4">
+    <input class="border rounded p-2" placeholder="Cari Produk" type="text"/>
+    <i class="fas fa-search text-gray-700">
+    </i>
+    <a class="text-gray-700" href="#">
+     Akun
+    </a>
+    <a class="text-gray-700" href="#">
+     <i class="fas fa-shopping-cart">
+     </i>
+    </a>
+   </div>
+  </nav>
+  <main class="max-w-6xl mx-auto p-6">
+   <div class="text-sm text-gray-500 mb-4">
+    Elektronik / Audio / Headphone / Belanja Headphone berdasarkan tipe / airpods-max
+   </div>
+   <div class="flex flex-col lg:flex-row">
+    <div class="w-full lg:w-1/2">
+     <img alt="Airpods Max" class="w-full" height="500" id="main-product-image" src="https://storage.googleapis.com/a1aa/image/sPOuoWdE7S72HFcZ6JEbGdgHsq1GXMEfMDgPhXYfAJ1N5KvTA.jpg" width="500"/>
+     <div class="flex space-x-2 mt-4 overflow-x-auto">
+      <img alt="Airpods Max Green" class="w-20 h-20 color-option" data-color="green" height="100" src="https://storage.googleapis.com/a1aa/image/BReME0SiEqQdEiqhUOl13DjSmKT6AaprjDuznPcWHHFjcl3JA.jpg" width="100"/>
+      <img alt="Airpods Max Red" class="w-20 h-20 color-option" data-color="red" height="100" src="https://storage.googleapis.com/a1aa/image/qzaoOuf6a33PS6IK6ScdEoufAwvwx3QBHR0whIKXta3R5KvTA.jpg" width="100"/>
+      <img alt="Airpods Max Blue" class="w-20 h-20 color-option" data-color="blue" height="100" src="https://storage.googleapis.com/a1aa/image/i0GwZq2OJ65NApv7YeA5tbWbw3z802Be9o9QPbN6ae2QyVeOB.jpg" width="100"/>
+      <img alt="Airpods Max Silver" class="w-20 h-20 color-option" data-color="silver" height="100" src="https://storage.googleapis.com/a1aa/image/O1bz0ieYHURqVSIXzuSrb61kPAsA2ZgOQsx1cSLGtgwncl3JA.jpg" width="100"/>
+      <img alt="Airpods Max White" class="w-20 h-20 color-option" data-color="white" height="100" src="https://storage.googleapis.com/a1aa/image/2J21EDEJ55KAO5XePKqrYdqGhylCogCc9ClgnTRQj60lcl3JA.jpg" width="100"/>
+     </div>
+    </div>
+    <div class="w-full lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
+     <h1 class="text-3xl font-bold">
+      Airpods- Max
+     </h1>
+     <p class="text-gray-700 mt-2">
+      keseimbangan sempurna antara audio berkualitas tinggi yang mendebarkan dan keajaiban AirPods yang mudah.
+     </p>
+     <div class="flex items-center mt-4">
+      <span class="text-green-500 text-xl">
+       <i class="fas fa-star">
+       </i>
+      </span>
+      <span class="text-green-500 text-xl">
+       <i class="fas fa-star">
+       </i>
+      </span>
+      <span class="text-green-500 text-xl">
+       <i class="fas fa-star">
+       </i>
+      </span>
+      <span class="text-green-500 text-xl">
+       <i class="fas fa-star">
+       </i>
+      </span>
+      <span class="text-green-500 text-xl">
+       <i class="fas fa-star">
+       </i>
+      </span>
+      <span class="text-gray-500 ml-2">
+       (121)
+      </span>
+     </div>
+     <div class="text-2xl font-bold mt-4">
+      $549.00 atau 99.99/bulan
+     </div>
+     <div class="text-gray-500 text-sm">
+      Pembayaran yang disarankan dengan pembiayaan khusus 6 bulan
+     </div>
+     <div class="mt-4">
+      <span class="text-lg font-semibold">
+       Pilih Warna
+      </span>
+      <div class="flex space-x-2 mt-2">
+       <div class="w-8 h-8 rounded-full bg-red-500 color-option" data-color="red">
+       </div>
+       <div class="w-8 h-8 rounded-full bg-gray-500 color-option border-2 border-black" data-color="gray">
+       </div>
+       <div class="w-8 h-8 rounded-full bg-green-500 color-option" data-color="green">
+       </div>
+       <div class="w-8 h-8 rounded-full bg-blue-500 color-option" data-color="blue">
+       </div>
+       <div class="w-8 h-8 rounded-full bg-white color-option" data-color="white">
+       </div>
+      </div>
+     </div>
+     <div class="flex items-center mt-4">
+      <button class="bg-gray-200 p-2 rounded-l" id="decrease-quantity">
+       -
+      </button>
+      <span class="bg-gray-100 p-2" id="quantity">
+       1
+      </span>
+      <button class="bg-gray-200 p-2 rounded-r" id="increase-quantity">
+       +
+      </button>
+      <span class="text-red-500 ml-4">
+       Hanya
+       <span class="font-bold">
+        12 Item
+       </span>
+       Tersisa!
+      </span>
+     </div>
+     <div class="flex space-x-4 mt-4">
+      <button class="bg-green-700 text-white px-6 py-2 rounded" id="buy-now">
+       Beli Sekarang
+      </button>
+      <button class="bg-gray-200 text-gray-700 px-6 py-2 rounded">
+       Tambahkan ke Keranjang
+      </button>
+     </div>
+     <div class="mt-4">
+      <div class="flex items-center">
+       <i class="fas fa-truck text-green-700">
+       </i>
+       <span class="ml-2">
+        Pengiriman Gratis
+       </span>
+       <span class="ml-2 text-gray-500">
+        Masukkan kode pos Anda untuk Ketersediaan Pengiriman
+       </span>
+      </div>
+      <div class="flex items-center mt-2">
+       <i class="fas fa-undo text-green-700">
+       </i>
+       <span class="ml-2">
+        Pengembalian Pengiriman
+       </span>
+       <span class="ml-2 text-gray-500">
+        Pengembalian Pengiriman Gratis 30 hari.
+        <a class="text-green-700" href="#">
+         Detail
+        </a>
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <div class="modal" id="checkout-modal">
+   <div class="modal-content">
+    <span class="text-2xl font-bold">
+     CHECKOUT
+    </span>
+    <p class="mt-4">
+     Terima kasih telah berbelanja dengan kami!
+    </p>
+    <button class="bg-green-700 text-white px-6 py-2 rounded mt-4" id="close-modal">
+     Tutup
+    </button>
+   </div>
+  </div>
+  <script>
+   document.querySelectorAll('.color-option').forEach(function(element) {
+    element.addEventListener('click', function() {
+     var color = this.getAttribute('data-color');
+     var imageUrl = '';
+     switch (color) {
+      case 'green':
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/BReME0SiEqQdEiqhUOl13DjSmKT6AaprjDuznPcWHHFjcl3JA.jpg';
+       break;
+      case 'red':
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/qzaoOuf6a33PS6IK6ScdEoufAwvwx3QBHR0whIKXta3R5KvTA.jpg';
+       break;
+      case 'blue':
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/i0GwZq2OJ65NApv7YeA5tbWbw3z802Be9o9QPbN6ae2QyVeOB.jpg';
+       break;
+      case 'silver':
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/O1bz0ieYHURqVSIXzuSrb61kPAsA2ZgOQsx1cSLGtgwncl3JA.jpg';
+       break;
+      case 'white':
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/2J21EDEJ55KAO5XePKqrYdqGhylCogCc9ClgnTRQj60lcl3JA.jpg';
+       break;
+      default:
+       imageUrl = 'https://storage.googleapis.com/a1aa/image/sPOuoWdE7S72HFcZ6JEbGdgHsq1GXMEfMDgPhXYfAJ1N5KvTA.jpg';
+     }
+     document.getElementById('main-product-image').src = imageUrl;
+    });
+   });
+   document.getElementById('category-button').addEventListener('click', function() {
+    var dropdown = document.getElementById('category-dropdown');
+    dropdown.classList.toggle('hidden');
+   });
+   document.addEventListener('click', function(event) {
+    var isClickInside = document.getElementById('category-button').contains(event.target);
+    if (!isClickInside) {
+     document.getElementById('category-dropdown').classList.add('hidden');
+    }
+   });
+   var quantity = 1;
+   document.getElementById('increase-quantity').addEventListener('click', function() {
+    quantity++;
+    document.getElementById('quantity').innerText = quantity;
+   });
+   document.getElementById('decrease-quantity').addEventListener('click', function() {
+    if (quantity > 1) {
+     quantity--;
+     document.getElementById('quantity').innerText = quantity;
+    }
+   });
+   document.getElementById('buy-now').addEventListener('click', function() {
+    document.getElementById('checkout-modal').style.display = 'block';
+   });
+   document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('checkout-modal').style.display = 'none';
+   });
+  </script>
+ </body>
+</html>
